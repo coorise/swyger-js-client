@@ -1,0 +1,42 @@
+<html lang="en">
+<head>
+    <title>
+        Swyger API
+    </title>
+</head>
+<body>
+<div style="display: flex;flex-direction: column;justify-content: center">
+    <h1>
+        Welcome to Swyger API Client!
+    </h1>
+</div>
+<script type="module">
+    import SwygerClient from "./swyger-client.min.js";
+    //let config={}
+    let client= SwygerClient.init()
+    //Authentication
+    let auth=client?.auth()
+    //auth.register({email,passord},callback)
+    //...
+
+    //CRUD with database realtime
+    let ref=client?.database().ref('/your_path_reference') //like firebase
+    //ref.create({object},callback)
+    //OR listener
+    //ref.onValue(callback)
+    //...
+
+    //CRUD with File in realtime
+    let config={ //Discord/AWS/Google....
+        token:'discord-bot-token',
+        channelId:'discord-channel-id'
+    }
+    let location='local' //discord/aws/google
+    let storageRef=client?.storage(location,config).ref('/your_parent_ref')
+    //storageRef.upload({object},callback)
+    //...
+
+
+</script>
+</body>
+</html>
