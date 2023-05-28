@@ -1,9 +1,19 @@
 {
   "name": "@swyger/client",
   "version": "0.1.0",
-  "description": "",
+  "description": "Swyger Client is used for Swyger Server as consumer Rest API. Visit the master branch: https://github.com/coorise/swyger-js-client.git",
   "type": "module",
   "main": "src/index.js",
+  "publishConfig": {
+    "ignore": [
+      ".git/",
+      ".idea/",
+      ".backup/",
+      "v*.zip/",
+      "static/",
+      "node_modules"
+    ]
+  },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "cross-env NODE_ENV=dev node  ./replace-src.js && vite",
@@ -12,8 +22,8 @@
     "build:bundle": "cross-env NODE_ENV=dev BUILD_MODE=bundle  node ./replace-src.js && vite build -- --bundle",
     "start": "vite preview"
   },
-  "keywords": [],
-  "author": "",
+  "keywords": ["Client","RestAPI","API","Swyger","Swyger Client"],
+  "author": "Agglomy",
   "license": "ISC",
   "dependencies": {
     "acebase": "^1.29.0",
