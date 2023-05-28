@@ -1,6 +1,9 @@
 # Swyger Client JS
 
 ## Get Started
+Swyger Client is used for Swyger Server as consumer Rest API.
+Visit the master branch: https://github.com/coorise/swyger-js-client.git
+
 Download  the library from ``dist/``
 then create a config variable for your remote/local server
 ```
@@ -51,7 +54,7 @@ then import SwygerClient library
 
  </script>
 ```
-Note 1: For more details about to use our API Consumer, visit the ``DOC``.
+Note 1: For more details about to use our API Consumer, visit the ``DOC`` : https://github.com/coorise/swyger-js-client/tree/master/doc/swyger/api.
 
 Note 2: If you want to modify the entire api (eg:children route,...), you have to work with the main project (installing Node JS with the project dependencies ``npm i``) then locate the ``./src/api/api-route.js``,
 once you are done just build it with ``npm run build``, to get your new library in dist folder.
