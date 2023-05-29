@@ -1,9 +1,10 @@
 {
   "name": "@swyger/client",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "Swyger Client is used for Swyger Server as consumer Rest API. Visit the master branch: https://github.com/coorise/swyger-js-client.git",
   "type": "module",
-  "main": "src/index.js",
+  "main": "dist/swyger-client.min.js",
+  "module": "./src/index.js",
   "publishConfig": {
     "ignore": [
       ".git/",
