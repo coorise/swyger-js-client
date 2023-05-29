@@ -12,8 +12,7 @@
       "v*.zip/",
       "static/",
       "node_modules"
-    ],
-    "registry": "https://npm.pkg.github.com/swyger"
+    ]
   },
   "repository": {
     "type": "git",

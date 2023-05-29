@@ -6,4 +6,3 @@ logs
 .backup
 *.zip
 .vscode
-.npmrc
