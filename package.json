@@ -24,7 +24,7 @@
   },
   "keywords": ["Client","RestAPI","API","Swyger","Swyger Client"],
   "author": "Agglomy",
-  "license": "ISC",
+  "license": "MIT",
   "dependencies": {
     "acebase": "^1.29.0",
     "axios": "^1.4.0",
