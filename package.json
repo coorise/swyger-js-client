@@ -14,6 +14,10 @@
       "node_modules"
     ]
   },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/coorise/swyger-js-client.git"
+  },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "cross-env NODE_ENV=dev node  ./replace-src.js && vite",
