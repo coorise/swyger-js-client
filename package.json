@@ -11,7 +11,7 @@
       ".backup/",
       "v*.zip/",
       "static/",
-      "node_modules"
+      "node_modules",
     ],
     "registry": "https://npm.pkg.github.com/swyger"
   },
@@ -27,7 +27,7 @@
     "build:bundle": "cross-env NODE_ENV=dev BUILD_MODE=bundle  node ./replace-src.js && vite build -- --bundle",
     "start": "vite preview"
   },
-  "keywords": ["Client","RestAPI","API","Swyger","Swyger Client"],
+  "keywords": ["Client","RestAPI","API","Swyger","Swyger Client","Boilerplate","CMS"],
   "author": "Agglomy",
   "license": "MIT",
   "dependencies": {
