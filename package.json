@@ -11,7 +11,7 @@
       ".backup/",
       "v*.zip/",
       "static/",
-      "node_modules",
+      "node_modules"
     ],
     "registry": "https://npm.pkg.github.com/swyger"
   },
