@@ -17,8 +17,10 @@ jobs:
       - name: node
         uses: actions/setup-node@v3
         with:
-          node-version: 16
-          registry-url: https://registry.npmjs.org/
+          node-version: '16'
+          registry-url: 'https://registry.npmjs.org/'
+      - name: Install dependencies and build 🔧
+        run: npm ci && npm run build
       - name: swyger-client
         run: npm publish --access public
         env:
