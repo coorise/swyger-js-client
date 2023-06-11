@@ -1,16 +1,25 @@
-# Swyger Client JS
+# <span style="color:red">Swyger</span>  <span style="color:blue">Client JS</span>
 
 ## Get Started
 Swyger Client is used for Swyger Server as consumer Rest API.
 Visit the master branch: https://github.com/coorise/swyger-js-client.git
 
-Download  the library from ``dist/``
-then create a config variable for your remote/local server
+You can download the swyger database client js library on: https://www.unpkg.com/@swyger/client
+
+then save it somewhere in your directory like "/dist/swyger-client.min.js"
+
 ```
 <script type="module">
+        import SwygerClient from './dist/swyger-client.min.js'
+        //import SwygerStorageClient from '@swyger/client-storage' //with npm for node module
+
         let config={
             //Configure the offline DB
-            OFFLINE_DB_NAME:'swyger_database',
+            OFFLINE_DB_NAME:{
+                AUTH:'swyger_auth',
+                DATABASE:'swyger_database',
+                STORAGE:'swyger_storage'
+            },
 
             //Configure the server
             HOST_SERVER:{
@@ -29,32 +38,38 @@ then create a config variable for your remote/local server
             // A Unique Api key for all your servers
             API_KEY:your_api_key
         }
-
- </script>
-```
-then import SwygerClient library
-```
-<script type="module">
-        import SwygerClient from './src/index.js'
-        
         let client =SwygerClient.init(config)
         //now you can do authentication
-        let auth= client.auth
+        let auth= client?.auth?.auth()
         auth.register({email,password},callback)
-        ...
+        //...
         
-        //or crud for database
-        let database=client.database.ref('/my_path_reference') //like firebase database realtime
-        database.create({object},callback)
-        ...
+        //CRUD with database realtime
+        let ref=client?.database?.database().ref('/your/path/reference') //like firebase
+        //ref.create({object},callback)
+        //OR listener
+        //ref.onValue(callback)
+        //...
         
-        //also for storage
-        let storage=client.storage.ref('/my_path_reference')
-        database.upload({object},callback)
+        //CRUD with File in realtime
+        let storageConfig={ //Discord/AWS/Google....
+            token:'discord-bot-token',
+            channelId:'discord-channel-id'
+        }
+        let location='local' //discord/aws/google
+        let storageRef=client?.storage?.storage(location,storageConfig).ref('/your/parent/ref')
+        //storageRef.upload({object},callback)
+        //...
 
  </script>
 ```
-Note 1: For more details about to use our API Consumer, visit the ``DOC`` : https://github.com/coorise/swyger-js-client/tree/master/doc/swyger/api.
+# Build Your Own JS Client Library
+Note 0: Clone the repository:
+
+``git clone https://github.com/coorise/swyger-js-client.git``
+
+
+Note 1: For more details about how to use our API Consumer, visit the ``DOC`` : https://github.com/coorise/swyger-js-client/tree/master/doc/swyger/api.
 
 Note 2: If you want to modify the entire api (eg:children route,...), you have to work with the main project (installing Node JS with the project dependencies ``npm i``) then locate the ``./src/api/api-route.js``,
 once you are done just build it with ``npm run build``, to get your new library in dist folder.

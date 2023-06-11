@@ -3,7 +3,10 @@ here is an example of how to use event and with the chainable way:
 ```
     let messageFrom=[]
     let myMessage=[]
-    let event=client.event('parent')
+    let event=client
+    .auth//.database//.storage
+    ?.event('parent')
+    
     event
     .emit('emit parent').do(parentSnap=>{
       console.log('parent do: ',parentSnap?.value)

@@ -2,7 +2,7 @@
 Here you will see an example to manage devices connected with users authenticated:
 ```
     let devices=[]
-    client.auth().device
+    client.auth?.auth().device
       .connected((device)=>{
       if(device?.value?.from===client.auth?.$currentUserId){
         let deviceExist=devices.filter((item)=>item?.value?.socketId===device?.value?.value?.socketId)

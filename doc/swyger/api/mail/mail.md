@@ -1,7 +1,7 @@
-# Mail
+# Mail (Soon)
 ## Mail Setting Example
 ```
-const mail=client.mail(config)
+const mail=client.mail?.mail(config)
 ```
 ### Storage Listener Example
 ```

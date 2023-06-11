@@ -1,3 +1,4 @@
+# Storage
 ## Storage Route
 ```
  Upload one or many files: [POST] /api/v1/storage/**/upload?query=JSON.stringify(obj)
@@ -19,7 +20,12 @@
 Note: The '**' means path where your files should be saved or located
 ## Storage Setting and Path Example
 ```
-const storage=client.storage(location,config)
+let storageConfig={ //Discord/AWS/Google....
+            token:'discord-bot-token',
+            channelId:'discord-channel-id'
+        }
+let location='local' //discord/aws/google
+const storage=client.storage?.storage(location,storageConfig)
       .ref('/path')
       //.private() // private for socket io
       .child('/child')

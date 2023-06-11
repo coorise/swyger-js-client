@@ -1,8 +1,22 @@
-## Database
+# Database
+## Database Route
+```
+ Create one data: [POST] /api/v1/data/**/create-one
+ Create many data: [POST] /api/v1/data/**/create-many
+ Find one data: [POST] /api/v1/data/**/find-one
+ Find/Query many data: [POST] /api/v1/data/**/find-many
+ Get one data: [GET] /api/v1/data/**/find-one?query=JSON.stringify(obj)
+ Get/Query many data: [GET] /api/v1/data/**/find-many?query=JSON.stringify(obj)
+ Update one data: [PUT] /api/v1/data/**/update-one
+ Update many data: [PUT] /api/v1/data/**/update-many
+ Delete one data:[DELETE] /api/v1/data/**/delete-one
+ Delete many data: [DELETE] /api/v1/data/**/delete-many
 
+ custom request : [Method] /api/v1/data/**/custom
+```
 ## Database Setting
 ```
-let database=client.database()
+let database=client.database?.database()
 ```
 ## Database Create
 ```

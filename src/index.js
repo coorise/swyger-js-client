@@ -1,22 +1,20 @@
-import SocketService from "./api/socket_io/index.service";
-import RemoteService from "./api";
-import Config from "./api/env";
+import SwygerAuthClient from '@swyger/client-auth'
+import SwygerDatabaseClient from '@swyger/client-database'
+import SwygerStorageClient from '@swyger/client-storage'
 
 
 
 const SwygerClient= {
     init:(ClientConfig)=>{
-        let config=Config.init(ClientConfig)
-        const service = SocketService.init(config)
-        const req={
-            socket:{
-                auth:service?.auth,
-                database:service?.database,
-                storage:service?.storage
-            }
+        const auth = SwygerAuthClient.init(ClientConfig)
+        const database = SwygerDatabaseClient.init(ClientConfig)
+        const storage = SwygerStorageClient.init(ClientConfig)
+
+        return {
+            auth,
+            database,
+            storage
         }
-        const remote= RemoteService.init(config)
-        return remote(req)
     }
 }
 
