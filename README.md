@@ -11,7 +11,7 @@ then save it somewhere in your directory like "/dist/swyger-client.min.js"
 ```
 <script type="module">
         import SwygerClient from './dist/swyger-client.min.js'
-        //import SwygerStorageClient from '@swyger/client-storage' //with npm for node module
+        //import SwygerStorageClient from '@swyger/client-client' //with npm for node module
 
         let config={
             //Configure the offline DB
@@ -71,8 +71,8 @@ Note 0: Clone the repository:
 
 Note 1: For more details about how to use our API Consumer, visit the ``DOC`` : https://github.com/coorise/swyger-js-client/tree/master/doc/swyger/api.
 
-Note 2: If you want to modify the entire api (eg:children route,...), you have to work with the main project (installing Node JS with the project dependencies ``npm i``) then locate the ``./src/api/api-route.js``,
-once you are done just build it with ``npm run build``, to get your new library in dist folder.
+Note 2: If you want to modify the entire api (eg:children route,...), you have to work with the main project (installing Node JS with the project dependencies ``npm i``) <br> then locate the ``./src/api/api-route.js``,<br>
+once you are done just build it with ``npm run build``,<br> to get your new library in ``dist`` folder.
 
 # Todo
 - Removing/Reduce some unusual dependencies,functions, refactoring paths/files...

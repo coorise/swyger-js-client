@@ -1,6 +1,6 @@
 {
   "name": "@swyger/client",
-  "version": "0.1.6",
+  "version": "0.1.7",
   "description": "Swyger Client JS library is used for Swyger Server as consumer Rest API(authentication,CRUD, Storage...)! Visit the master branch: https://github.com/coorise/swyger-js-client.git",
   "type": "module",
   "main": "dist/swyger-client.min.js",
@@ -21,7 +21,7 @@
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "dev": "cross-env NODE_ENV=dev node  ./replace-src.js && vite",
+    "dev": "cross-env NODE_ENV=dev vite",
     "build": "cross-env NODE_ENV=prod BUILD_MODE=bundle-minify  node ./replace-src.js && vite build -- --minify --bundle",
     "build:dev": "cross-env NODE_ENV=dev node  ./replace-src.js && vite build",
     "build:bundle": "cross-env NODE_ENV=dev BUILD_MODE=bundle  node ./replace-src.js && vite build -- --bundle",
@@ -38,19 +38,27 @@
     "CRUD",
     "Storage",
     "firebase",
-    "socketio",
+    "socket.io",
     "https",
     "realtime",
     "auth",
     "database",
-    "cloud"
+    "cloud",
+    "strapi",
+    "all in one",
+    "library",
+    "sdk",
+    "web",
+    "browser",
+    "server",
+    "api consummer"
   ],
   "author": "Agglomy",
   "license": "MIT",
   "dependencies": {
-    "@swyger/client-auth": "^0.1.0",
-    "@swyger/client-database": "^0.1.0",
-    "@swyger/client-storage": "^0.1.4",
+    "@swyger/client-auth": "^0.1.1",
+    "@swyger/client-database": "^0.1.1",
+    "@swyger/client-storage": "^0.1.5",
     "cross-env": "^7.0.3"
   },
   "devDependencies": {
