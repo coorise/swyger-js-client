@@ -1,6 +1,6 @@
 {
   "name": "@swyger/client",
-  "version": "0.1.8",
+  "version": "0.1.9",
   "description": "Swyger Client JS library is used for Swyger Server as consumer Rest API(authentication,CRUD, Storage...)! Visit the master branch: https://github.com/coorise/swyger-js-client.git",
   "type": "module",
   "main": "dist/swyger-client.min.js",
@@ -62,10 +62,9 @@
     "Ivan Joel Sobgui"
   ],
   "dependencies": {
-    "@swyger/client": "^0.1.7",
-    "@swyger/client-auth": "^0.1.2",
-    "@swyger/client-database": "^0.1.2",
-    "@swyger/client-storage": "0.1.6",
+    "@swyger/client-auth": "^0.1.3",
+    "@swyger/client-database": "^0.1.3",
+    "@swyger/client-storage": "^0.1.9",
     "cross-env": "^7.0.3"
   },
   "devDependencies": {
